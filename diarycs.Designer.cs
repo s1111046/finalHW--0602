@@ -177,9 +177,9 @@ namespace 日曆
             // addbutton
             // 
             addbutton.Font = new Font("Microsoft JhengHei UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            addbutton.Location = new Point(1301, 70);
+            addbutton.Location = new Point(1281, 67);
             addbutton.Name = "addbutton";
-            addbutton.Size = new Size(43, 38);
+            addbutton.Size = new Size(63, 38);
             addbutton.TabIndex = 16;
             addbutton.Text = "+";
             addbutton.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@ namespace 日曆
             colorbutton.Font = new Font("Microsoft JhengHei UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             colorbutton.Location = new Point(1281, 16);
             colorbutton.Name = "colorbutton";
-            colorbutton.Size = new Size(63, 34);
+            colorbutton.Size = new Size(63, 45);
             colorbutton.TabIndex = 25;
             colorbutton.Text = "color";
             colorbutton.UseVisualStyleBackColor = true;

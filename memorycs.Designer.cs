@@ -49,7 +49,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft JhengHei UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft JhengHei UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = ColorTranslator.FromHtml("#003E3E");
+            label1.BackColor = Color.Transparent;
             label1.Location = new Point(504, 39);
             label1.Name = "label1";
             label1.Size = new Size(99, 36);

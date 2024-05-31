@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +18,29 @@ namespace 日曆
         {
             InitializeComponent();
             memoListBox.DrawItem += memoListBox_DrawItem;
+            SetStaticGradientBackground();
         }
+        private void SetStaticGradientBackground()
+        {
+            // 定義極光顏色
+            Color[] auroraColors = {
+                Color.FromArgb(150, 0, 40, 80), // 深藍色
+                Color.FromArgb(150, 0, 120, 60), // 深綠色
+                Color.FromArgb(150, 0, 80, 100) // 藍綠色
+            };
 
+            // 創建線性漸層筆刷
+            LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, Color.Black, Color.Black, 0F);
+            ColorBlend blend = new ColorBlend();
+            blend.Positions = new float[] { 0, 0.5f, 1 };
+            blend.Colors = auroraColors;
+            brush.InterpolationColors = blend;
+
+            // 設置表單的背景為線性漸層筆刷
+            this.BackgroundImage = new Bitmap(this.Width, this.Height);
+            Graphics g = Graphics.FromImage(this.BackgroundImage);
+            g.FillRectangle(brush, this.ClientRectangle);
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             InitializeDiariesFolder();

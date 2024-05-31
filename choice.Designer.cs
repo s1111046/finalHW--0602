@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(choice));
             diarybutton = new Button();
             accountingbutton = new Button();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            StarTimer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,8 +64,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft JhengHei UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(341, 88);
+            label1.Font = new Font("Microsoft JhengHei UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.LightBlue;
+            label1.Location = new Point(340, 86);
             label1.Name = "label1";
             label1.Size = new Size(211, 36);
             label1.TabIndex = 2;
@@ -72,12 +75,16 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(283, 79);
+            pictureBox1.Location = new Point(266, 67);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(65, 53);
+            pictureBox1.Size = new Size(79, 70);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
+            // 
+            // StarTimer
+            // 
+            StarTimer.Tick += StarTimer_Tick;
             // 
             // choice
             // 
@@ -101,5 +108,6 @@
         private Button accountingbutton;
         private Label label1;
         private PictureBox pictureBox1;
+        private System.Windows.Forms.Timer StarTimer;
     }
 }

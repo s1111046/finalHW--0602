@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -66,7 +65,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = ColorTranslator.FromHtml("#003E3E");
+            label1.BackColor = Color.Transparent;
             label1.Location = new Point(363, 85);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
@@ -76,7 +77,6 @@
             // 
             // accountsDataGridView
             // 
-            
             accountsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             accountsDataGridView.Columns.AddRange(new DataGridViewColumn[] { NameColumn, Amount });
             accountsDataGridView.Location = new Point(15, 20);
@@ -86,7 +86,6 @@
             accountsDataGridView.RowTemplate.Height = 32;
             accountsDataGridView.Size = new Size(336, 341);
             accountsDataGridView.TabIndex = 4;
-
             // 
             // NameColumn
             // 
@@ -121,7 +120,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = ColorTranslator.FromHtml("#003E3E");
+            label3.BackColor = Color.Transparent;
             label3.Location = new Point(400, 140);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
@@ -141,6 +142,8 @@
             // button1
             // 
             button1.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.BackColor = Color.Transparent;
+            label1.ForeColor = ColorTranslator.FromHtml("#003E3E");
             button1.Location = new Point(27, 381);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
@@ -206,8 +209,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.InactiveCaption;
+            label2.BackColor = SystemColors.Control;
             label2.Font = new Font("微軟正黑體", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = ColorTranslator.FromHtml("#003E3E");
+            label2.BackColor = Color.Transparent;
             label2.Location = new Point(726, 21);
             label2.Name = "label2";
             label2.Size = new Size(211, 36);
@@ -218,6 +223,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1010, 452);
             Controls.Add(label2);
             Controls.Add(chart1);
@@ -235,6 +241,7 @@
             Margin = new Padding(2);
             Name = "Form2";
             Text = "Form2";
+            Paint += Form2_Paint;
             ((System.ComponentModel.ISupportInitialize)accountsDataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);

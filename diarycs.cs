@@ -222,8 +222,7 @@ namespace 日曆
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"照片儲存失败：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        
                     }
                 }
             }

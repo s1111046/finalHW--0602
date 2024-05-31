@@ -35,7 +35,7 @@
             label2 = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
             pictureBox1 = new PictureBox();
-            meteorTimer = new System.Windows.Forms.Timer(components);
+            MeteorTimer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -44,6 +44,7 @@
             monthCalendar1.Location = new Point(262, 162);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
+            monthCalendar1.DateSelected += monthCalendar1_DateSelected;
             // 
             // memory
             // 
@@ -73,13 +74,16 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(77, 32);
+            pictureBox1.Location = new Point(57, 11);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(64, 57);
+            pictureBox1.Size = new Size(97, 92);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
-            
+            // 
+            // MeteorTimer
+            // 
+            MeteorTimer.Tick += MeteorTimer_Tick;
             // 
             // Form1
             // 
@@ -105,6 +109,6 @@
         private Label label2;
         private System.Windows.Forms.Timer timer2;
         private PictureBox pictureBox1;
-        private System.Windows.Forms.Timer meteorTimer;
+        private System.Windows.Forms.Timer MeteorTimer;
     }
 }
