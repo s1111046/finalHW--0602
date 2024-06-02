@@ -220,7 +220,7 @@ namespace 日曆
                     }
                     catch (Exception ex)
                     {
-                       
+                       entry.PhotoFileNames.Add(photoFileName);
                     }
                 }
             }
