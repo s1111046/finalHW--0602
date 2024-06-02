@@ -264,6 +264,8 @@ namespace 日曆
                     context.Text = diaryEntry.Context;
                     BackColor = diaryEntry.SelectedColor;
 
+                    totalphoto = diaryEntry.PhotoFileNames.Count;
+
                     // 加載照片
                     for (int i = 0; i < diaryEntry.PhotoFileNames.Count && i < pictureBoxes.Count; i++)
                     {
