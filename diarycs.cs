@@ -220,7 +220,7 @@ namespace 日曆
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"保存照片時出錯: {ex.Message}");
+                       
                     }
                 }
             }
