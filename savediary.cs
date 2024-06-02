@@ -14,18 +14,18 @@ namespace 日曆
         // 讀取日記的方法
         public static DiaryEntry LoadDiary(string fileName)
         {
-            // 检查日记文件是否存在
+            // 檢查日記文件是否存在
             if (File.Exists(fileName))
             {
-                // 读取日记文件内容
+                // 讀取日記文件內容
                 string json = File.ReadAllText(fileName);
 
-                // 将JSON反序列化为DiaryEntry对象
+                // 將 JSON 反序列化為 DiaryEntry 對象
                 return JsonConvert.DeserializeObject<DiaryEntry>(json);
             }
             else
             {
-                // 如果日记文件不存在，则返回空
+                // 如果日記文件不存在，則返回空
                 return null;
             }
         }

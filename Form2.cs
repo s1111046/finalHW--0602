@@ -34,9 +34,9 @@ namespace 日曆
         {
             // 定義極光顏色
             Color[] auroraColors = {
-                Color.FromArgb(150, 0, 40, 80), // 深藍色
-                Color.FromArgb(150, 0, 120, 60), // 深綠色
-                Color.FromArgb(150, 0, 80, 100) // 藍綠色
+                Color.FromArgb(150, 0, 40, 80), 
+                Color.FromArgb(150, 0, 120, 60), 
+                Color.FromArgb(150, 0, 80, 100) 
             };
 
             // 創建線性漸層筆刷
@@ -275,7 +275,7 @@ namespace 日曆
 
         private void Form2_Paint(object sender, PaintEventArgs e)
         {
-            
+
 
         }
 
